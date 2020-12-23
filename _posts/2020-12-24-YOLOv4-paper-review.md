@@ -1,5 +1,5 @@
 ---
-title: [논문 리뷰] YOLOv4
+title: "[논문 리뷰] YOLOv4"
 date: 2020-12-24 00:25:00 -0400
 categories: yolo yolov4 object-detection spp-net panet Mish-Activation
 ---
