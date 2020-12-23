@@ -19,7 +19,7 @@ locale                   : "ko-KR"
 title                    : "YongHoney"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "이용헌"
+name                     : 
 description              : "논문 공부와 프로젝트 게재를 위한 페이지입니다."
 url                      : "https://yonghoney.github.io"
 baseurl                  : "yonghoney" # the subpath of your site, e.g. "/blog"
