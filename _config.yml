@@ -93,7 +93,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Lee YongHeon"
+  name             : "이용헌"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "딥러닝, 물체 인식에 관심이 많은 학생입니다."
   location         : "서울,대한민국"
@@ -175,7 +175,7 @@ exclude:
 keep_files:
   - .git
   - .svn
-encoding: "utf-8"
+encoding: UTF-8
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
