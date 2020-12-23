@@ -175,7 +175,7 @@ exclude:
 keep_files:
   - .git
   - .svn
-encoding: UTF-8
+encoding: CP949
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
