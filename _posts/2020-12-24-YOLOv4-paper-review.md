@@ -34,7 +34,7 @@ Object Detection 분야의 연구는 R-CNN을 시작으로 많은 연구가 진�
 구조는 크게 3가지로 구분됩니다. 
 1. Backbone
 2. Neck
-3, Head(Dense / Sparse Prediction)
+3. Head(Dense / Sparse Prediction)
 
 - Backbone은 input image를 feature map으로 변형하는 부분입니다.
 - Neck은 Backbone과 Head를 연결하는 부분입니다. Feature map을 정제(Refinement), 재구성(Reconfiguration)한다고 생각하면 될 것 같습니다.
