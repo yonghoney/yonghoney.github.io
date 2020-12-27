@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://yonghoney.github.io/sitemap.xml
