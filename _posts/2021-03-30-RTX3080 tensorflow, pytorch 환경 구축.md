@@ -14,7 +14,7 @@ categories:
 
 많은 블로그에서 nvidia-driver, cuda, cudnn 설치하는 방법을 공유하고 있기 때문에, nvidia에서 제공하는 페이지만 공유하겠습니다.
 
-[https://docs.nvidia.com/deeplearning/cudnn/support-matrix/index.html][https://docs.nvidia.com/deeplearning/cudnn/support-matrix/index.html]
+[Link: ][https://docs.nvidia.com/deeplearning/cudnn/support-matrix/index.html]
 
 cudnn 버전에 맞는 cuda, nvidia-driver 버전이 나와있으니 참고하면 좋을 것 같습니다.
 
