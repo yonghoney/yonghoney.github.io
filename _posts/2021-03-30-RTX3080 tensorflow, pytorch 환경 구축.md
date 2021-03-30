@@ -30,11 +30,11 @@ python : 3.8.7 (pycharm)
 
 ### tensorflow 버전
 2.4.1 이전 버전의 tensorflow 사용 시 ./cuda/bin/cusolver64_11.dll 파일 이름을 cusolver64_10.dll로 바꿔줘야 tf.test.is_gpu_available()에서 True 값을 반환합니다.  
-3.
+
 하지만 tf-nightly 2.5.0.dev20210326 버전, tf-nightly 2.6.0.dev20210328 버전(다른 날짜는 시도 해보지 않음)의 경우 cusolver64_11.dll로 그대로 두고 진행해도 True 값을 반환하는 것을 확인했습니다.  
 
 2.4.1 이전 버전에서 True 값을 반환할 뿐 정상작동 하는지에 대한 유무는 확인하지 않았으니 2.4.1 이전 버전이 필요하신 분은 직접 example code를 돌려 확인해보는 것을 추천드립니다.  
-3.
+
 tf-nightly 버전의 경우 정상 작동을 확인했습니다.  
 
 
