@@ -38,11 +38,7 @@ python : 3.8.7 (pycharm)
 tf-nightly 버전의 경우 정상 작동을 확인했습니다.  
 
 
-example code를 돌릴 경우 저는 처음에 MNIST 기본 sample code를 돌려 gpu로 돌린 것보다 cpu로 돌린게 속도가 2배 이상이 나오는 것을 보고 이상이 있다고 생각했으나  
-
-stackoverflow에 문의한 결과 고수님들께서 주신 답변으로는 연산량이 충분하지 않기 때문에 그렇다, GAN 같은 연산량이 충분한 example code를 돌려봐라 해서 돌려본 결과  
-
-gpu가 cpu에 비해 적으면 10배에서 많이 차이날 때는 20배까지 차이 나는 것을 확인했습니다.  
+example code를 돌릴 경우 저는 처음에 MNIST 기본 sample code를 돌려 gpu로 돌린 것보다 cpu로 돌린게 속도가 2배 이상이 나오는 것을 보고 이상이 있다고 생각했으나 stackoverflow에 문의한 결과 고수님들께서 주신 답변으로는 연산량이 충분하지 않기 때문에 그렇다, GAN 같은 연산량이 충분한 example code를 돌려봐라 해서 돌려본 결과 gpu가 cpu에 비해 적으면 10배에서 많이 차이날 때는 20배까지 차이 나는 것을 확인했습니다.  
 
 
 따라서 example code를 돌릴 때 연산량이 충분한 문제로 돌려보는 것을 추천드립니다.
@@ -51,7 +47,7 @@ gpu가 cpu에 비해 적으면 10배에서 많이 차이날 때는 20배까지 �
 ### pytorch 버전
 pytorch는 제가 메인으로 다루지 않아 torch.cuda.is_available() 확인만 했습니다.  
 
-최신 버전의 1.8.1로 설치할 경우 False가 나와 검색을 해서 확인한 결과  
+최신 버전의 1.8.1로 설치할 경우 False가 나와 검색을 해서 확인한 결과 가상환경 command(또는 각자의 환경)에서 다음과 같이 설치를 해주고  
 
 pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html  
 
