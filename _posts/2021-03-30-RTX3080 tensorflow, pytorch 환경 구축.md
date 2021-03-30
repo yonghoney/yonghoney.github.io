@@ -53,5 +53,6 @@ pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f ht
 
 한 단계 다운그레이드 할 경우 torch.cuda.is_available() == True를 확인했습니다.  
 
+참고 : https://mambo-coding-note.tistory.com/513
 
 환경 구축이 잘 되지 않아 몇 주의 시간이 걸렸지만 gpu가 제 역할을 하고 있는 것을 보니 기쁜 것 같네요.
