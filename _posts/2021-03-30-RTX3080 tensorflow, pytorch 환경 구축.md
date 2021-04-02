@@ -1,5 +1,5 @@
 ---
-title: "[RTX3080]  tensorflow, pytorch 간략 환경 공유"
+title: "[딥러닝 환경 세팅] RTX3080 tensorflow, pytorch 간략 환경 공유"
 date: 2021-03-30 09:40:00 -0400
 categories: 
 - RTX3080
