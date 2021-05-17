@@ -78,4 +78,4 @@ with h5py.File('coco_toy_data.h5', 'w') as f:
 
 
 
-기타 상세한 내용은 [h5py 페이지](https://www.h5py.org/)를 참고하면 좋을 것 같.
+기타 상세한 내용은 [h5py 페이지](https://www.h5py.org/)를 참고하면 좋을 것 같습니다.
