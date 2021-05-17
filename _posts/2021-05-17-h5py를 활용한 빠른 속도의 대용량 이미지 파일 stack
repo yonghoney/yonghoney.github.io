@@ -32,7 +32,9 @@ with h5py.File('sample_h5py.h5', 'w') as f:
 '''
 
 # 이미지 파일을 개별적으로 불러온 후 h5py파일에 stack 하는 방법
-'padding'과 img_to_tensor는 user_defined 함수이고, img를 path에서 불러와서 img로 넣어주는 방식이다.
+
+'padding'과 img_to_tensor는 user_defined 함수이고, img를 path에서 불러와서 img로 넣어주고,
+
 img_ds에 coco_toy_data - images를 할당해주고 img_ds의 index를 활용해 img_ds에 불러온 img를 하나씩 넣어주는 방식이다.
 
 '''python
@@ -45,4 +47,39 @@ with h5py.File('coco_toy_data.h5', 'w') as f:
         img_ds[i:i+1:, :, :] = img
 '''
 
-상세한 내용은 [h5py 페이지](https://www.h5py.org/)를 참고하면 좋을 것 같다.
+하지만 이 방법은 엄청난 크기의 파일 용량을 차지한다.
+
+실제로 640 x 640 x 3 사이즈의 이미지 16만 장을 해당 코드를 통해 합쳐주는 과정에서 7만 장 부근에서 처음보는 error가 발생하여, 
+
+구글에 검색해보니 컴퓨터 디스크 메모리 부족이라하여 디스크 메모리를 보니 실제로 7GB가 남아있었다.
+
+h5 파일을 확인해보니 320기가...였다.
+
+따라서 파일을 압축하여 저장하는 방법을 찾아냈다.
+
+# 이미지 파일을 개별적으로 불러온 후 h5py파일에 압축하여 stack 하는 방법
+
+코드에는 create_dataset의 paramter중 compression과, compression_opt가 추가된 것 밖에는 없다.
+
+실제 압축이 되었는지 확인하기 위해 100개의 640 x 640 x 3의 이미지로 테스트 한 결과
+
+압축하기 전에는 468MB였던 파일이 압축 후에는 991KB로 줄어있었다.
+
+불러와서 확인한 결과 차이가 없는 것 역시 확인했다.
+
+다만 속도가 1/10으로 줄어드는 단점이 있었으나 용량이 확실히 개선되었기 때문에 압축하는 방법을 추천한다.
+
+'''python
+import h5py
+
+with h5py.File('coco_toy_data.h5', 'w') as f:
+    img_ds = f.create_dataset('images', shape = (len(toy_img_path), b_w, b_h, 3), dtype = int,
+    compression = 'gzip', compression_opt = 9)
+    for i, path in tqdm(enumerate(toy_img_path), total = len(toy_img_path)):
+        img = padding(img_to_tensor(path))
+        img_ds[i:i+1:, :, :] = img
+'''
+
+
+
+기타 상세한 내용은 [h5py 페이지](https://www.h5py.org/)를 참고하면 좋을 것 같다.
