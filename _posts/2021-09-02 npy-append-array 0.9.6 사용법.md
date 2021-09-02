@@ -24,7 +24,7 @@ with open 방식처럼, 로컬에 파일을 하나 만들어두고 그 파일에
 pip install npy-append-array
 ```
 
-npy-append-array 패키지를 설치하고, document에 나와있는대로 따라하기만 하면 끝입니다.
+npy-append-array 패키지를 설치하고, [document](https://pypi.org/project/npy-append-array/)에 나와있는대로 따라하기만 하면 끝입니다.
 
 # numpy 파일 저장
 
