@@ -20,15 +20,15 @@ with open 방식처럼, 로컬에 파일을 하나 만들어두고 그 파일에
 
 # 패키지 설치
 
-'''
+```
 pip install npy-append-array
-'''
+```
 
 npy-append-array 패키지를 설치하고, document에 나와있는대로 따라하기만 하면 끝입니다.
 
 # numpy 파일 저장
 
-'''
+```
 from npy_append_array import NpyAppendArray
 import numpy as np
 
@@ -38,27 +38,28 @@ arr2 = np.array([[1,2],[3,4],[5,6]])
 filename='out.npy'
 
 np.save(filename, arr1)
-'''
+```
 
 # numpy 파일 불러온 후 append
 
-'''
+```
 npaa = NpyAppendArray(filename)
 npaa.append(arr1)
 npaa.append(arr2)
 npaa.append(arr2)
-'''
+```
 
 # 저장한 파일 불러와서 출력
 
-'''
+```
 data = np.load(filename, mmap_mode="r")
 
 print(data)
-'''
+```
 
 # 전체 코드
-'''
+
+```
 from npy_append_array import NpyAppendArray
 import numpy as np
 
@@ -77,7 +78,7 @@ npaa.append(arr2)
 data = np.load(filename, mmap_mode="r")
 
 print(data)
-'''
+```
 
 # 다른 예시
 
@@ -87,7 +88,7 @@ print(data)
 
 'resize_img'는 제가 만든 함수로, 이 문서를 이해하는 데에는 필요하지 않습니다.
 
-'''
+```
 filename = 'crop_cifar10_train.npy'
 
 np.save(filename, np.zeros([1, 32, 32, 3]))
@@ -104,4 +105,4 @@ for idx, item in tqdm(enumerate(train_x), total = train_x.shape[0]):
 
 train_data = np.load(filename, mmap_mode="r")
 print(train_data.shape)
-'''
+```
